@@ -1,6 +1,5 @@
 import math
 
-
 # Exercise 1: Handling ZeroDivisionError
 def safe_divide(numerator, denominator):
     try:
@@ -9,17 +8,15 @@ def safe_divide(numerator, denominator):
         print("Error: Cannot divide by Zero.")
         return None
 
-
 # Exercise 2: Handling ValueError
 def calculate_square_root(number1):
     try:
         if number1 < 0:
             raise ValueError
         return math.sqrt(number1)
-    except (ValueError, TypeError):git
+    except (ValueError, TypeError): # Corrected from `TypeError):git`
         print("Invalid input! Please enter a positive integer or a float value.")
         return None
-
 
 # Exercise 3: Handling Generic Exceptions
 def complex_math_task(num):
@@ -31,17 +28,37 @@ def complex_math_task(num):
         print("An error occurred during calculation.")
         return None
 
-
 # Test Demonstrations
 if __name__ == "__main__":
     print("--- Exercise 1 Tests ---")
     print(f"10 / 2 = {safe_divide(10, 2)}")
+    # Output:
+    # --- Exercise 1 Tests ---
+    # 10 / 2 = 5.0
+    
     print(f"10 / 0 = {safe_divide(10, 0)}")
+    # Output:
+    # Error: Cannot divide by Zero.
+    # 10 / 0 = None
 
     print("\n--- Exercise 2 Tests ---")
     print(f"Sqrt of 16: {calculate_square_root(16)}")
+    # Output:
+    # --- Exercise 2 Tests ---
+    # Sqrt of 16: 4.0
+    
     print(f"Sqrt of -4: {calculate_square_root(-4)}")
+    # Output:
+    # Invalid input! Please enter a positive integer or a float value.
+    # Sqrt of -4: None
 
     print("\n--- Exercise 3 Tests ---")
     print(f"Task with num=10: {complex_math_task(10)}")
+    # Output:
+    # --- Exercise 3 Tests ---
+    # Task with num=10: 2.0
+    
     print(f"Task with num=5: {complex_math_task(5)}")
+    # Output:
+    # An error occurred during calculation.
+    # Task with num=5: None

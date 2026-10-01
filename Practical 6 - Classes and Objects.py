@@ -1,6 +1,5 @@
 # PROBLEM 1: BUGGY CODE FIX USING super()
 
-
 class Person:
 
     def __init__(self, name, id_num):
@@ -23,11 +22,14 @@ class Emp(Person):
 
 # Object Creation and Testing
 Emp_details = Emp("Mayank", 103)
+
 Emp_details.Print()
+# Output: Emp class called
+
 Emp_details.Display()
+# Output: Name: Mayank, ID: 103
 
 # PROBLEM 2: ANAGRAM CHECK
-
 
 def is_anagram(str1, str2):
     # Normalize by converting to lowercase and removing whitespace
@@ -40,9 +42,10 @@ def is_anagram(str1, str2):
 word1 = "listen"
 word2 = "silent"
 print(f"\nAre '{word1}' and '{word2}' anagrams? {is_anagram(word1, word2)}")
+# Output: 
+# Are 'listen' and 'silent' anagrams? True
 
 # PROBLEM 3: ARMSTRONG NUMBER CHECK
-
 
 def is_armstrong(number):
     num_str = str(number)
@@ -54,10 +57,10 @@ def is_armstrong(number):
 # Testing Problem 3
 test_num = 153
 print(f"Is {test_num} an Armstrong number? {is_armstrong(test_num)}")
+# Output: Is 153 an Armstrong number? True
 
 
 # PROBLEM 4: CAR DEALERSHIP INVENTORY SYSTEM (CLASSES & OBJECTS)
-
 
 class Vehicle:
     # Task-2: Default color for all vehicles
@@ -91,7 +94,24 @@ car2 = Vehicle(180, 25)
 car2.set_seating_capacity(4)
 
 print("\n--- Car 1 Properties ---")
+# Output:
+# --- Car 1 Properties ---
+
 car1.display_properties()
+# Output: 
+# Color: white
+# Max Speed: 200 kmph
+# Mileage: 20 kmpl
+# Seating Capacity: 5
+# ------------------------------
 
 print("--- Car 2 Properties ---")
+# Output: --- Car 2 Properties ---
+
 car2.display_properties()
+# Output:
+# Color: white
+# Max Speed: 180 kmph
+# Mileage: 25 kmpl
+# Seating Capacity: 4
+# ------------------------------
